@@ -14,6 +14,22 @@ function rpttheme_setup()
         'right-of-logo' => __('Right Of Logo', 'rpttheme')
     ));
 }
+
+//footer widget
+function all_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'footer widget',
+		'id'            => 'footer_widget',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+}
+add_action( 'widgets_init', 'all_widgets_init' );
+
 add_action('wp_enqueue_scripts', 'rpttheme_load_scripts');
 function rpttheme_load_scripts()
 {
