@@ -96,8 +96,14 @@
                                         <div class='form-group2 required'>
 
                                             <div class="col-md-12 col-md-offset-2">
+                                               <hr>
                                                 <label class='control-label'><input type="checkbox" name="policy_check" value="on" checked=""></label>
-                                                <small>I have read and agree to the <a href="/rentalpolicy/" target="_blank" class="bluelink">Rental Policies</a> and authorize Rocky Point Travel to book this reservation and charge my credit card. I also understand that all renters must be at least 25 during spring break for Sonoran Sea, Sonoran Spa, Las Palomas and Las Palmas.</small>
+                                                <small>
+                                                Terms and Conditions
+                                               <textarea cols="80" rows="10"><?php echo get_field( "termsandconditions", 511 ); ?></textarea>
+</small>
+
+<hr>
                                             </div>
                                         </div>
                                     </div>
