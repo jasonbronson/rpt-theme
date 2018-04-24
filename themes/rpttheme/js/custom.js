@@ -39,7 +39,7 @@ rpt.main = {
 
         var object;
         $.ajax({
-            url: 'https://api.rockypointtravel.com/rates/getrate?condo=' + condo + '&adults=' + adults + '&kids=' + kids + '&start=' + start + '&stop=' + stop,
+            url: 'https://api.rockypointtravel.dev/rates/getrate?condo=' + condo + '&adults=' + adults + '&kids=' + kids + '&start=' + start + '&stop=' + stop,
             method: 'get',
             data: '',
             dataType: 'text',
@@ -97,7 +97,7 @@ rpt.main = {
     getAdults: function(){
 
         $.ajax({
-            url: 'https://api.rockypointtravel.com/data/getadults',
+            url: 'https://api.rockypointtravel.dev/data/getadults',
             method: 'get',
             data: '',
             dataType: 'text',
@@ -132,7 +132,7 @@ rpt.main = {
     getResorts: function(){
 
         $.ajax({
-            url: 'https://api.rockypointtravel.com/data/getresorts',
+            url: 'https://api.rockypointtravel.dev/data/getresorts',
             method: 'get',
             data: '',
             dataType: 'text',
@@ -253,7 +253,7 @@ rpt.main = {
         $("#condo").val('');
 
         $.ajax({
-            url: 'https://api.rockypointtravel.com/data/getcondos?resort=' + resort,
+            url: 'https://api.rockypointtravel.dev/data/getcondos?resort=' + resort,
             method: 'get',
             data: '',
             dataType: 'text',
@@ -351,7 +351,7 @@ rpt.main = {
             console.log(res);
             //'instructions=' + str
             $.ajax({
-                url: 'https://api.rockypointtravel.com/save/order',
+                url: 'https://api.rockypointtravel.dev/save/order',
                 method: 'post',
                 data: res,
                 dataType: 'json',

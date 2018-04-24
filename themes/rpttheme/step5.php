@@ -95,20 +95,19 @@
                                     <div class='form-row'>
                                         <div class='form-group2 required'>
 
-                                            <div class="col-md-12 col-md-offset-2">
-                                               <hr>
-                                                <label class='control-label'><input type="checkbox" name="policy_check" value="on" checked=""></label>
-                                                <small>
-                                                Terms and Conditions
-                                               <textarea cols="80" rows="10"><?php echo get_field( "termsandconditions", 511 ); ?></textarea>
-</small>
+                                            <div class="col-md-6 ">
+                                                    <label class='control-label'>Terms and Conditions:  <input type="checkbox" name="policy_check" value="on" checked=""></label>
+                                                </div>
+                                            <div class="col-md-6">
+                                               
+                                               <textarea cols="40" rows="5"><?php $p = get_post( 533 ); echo $p->post_content; ?></textarea>
 
-<hr>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <hr>
 
 
 
