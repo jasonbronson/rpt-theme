@@ -39,6 +39,8 @@
                               <li data-value="4">4 adults</li>
                               <li data-value="5">5 adults</li>
                               <li data-value="6">6 adults</li>
+                              <li data-value="7">7 adults</li>
+                              <li data-value="8">8 adults</li>
                           </ul>
                         <select data-placeholder="Adults">
                           <option value="">Adults</option>
