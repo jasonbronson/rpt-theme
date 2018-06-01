@@ -233,6 +233,13 @@ rpt.main = {
         var data = JSON.parse(this.getCookieData('reservationdata'));
         var formElement = document.getElementById(formName);
         populate(formElement, data);
+        console.log(data);
+        //check if credit card name and fill in that form field
+        if(formName == "reservationcc-form"){
+            var name = data.fname + " " + data.lname;
+            $('#card_name').val(name);
+        }
+
     },
     getCondo: function(resort){
 

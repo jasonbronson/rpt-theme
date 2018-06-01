@@ -13,7 +13,7 @@
                                                 <label class='control-label'>Name on Card:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <input class='form-control' type='text' name="card_name" value="">
+                                                <input class='form-control' type='text' name="card_name" value="" id="card_name" disabled>
                                             </div>
                                         </div>
                                     </div>
