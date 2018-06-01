@@ -109,12 +109,10 @@
 </section>
 <!-- End About -->
 <!-- Start Testimonials -->
-<section class="testimonials">
+<!-- <section class="testimonials">
 
-  <!-- Start Video Background -->
   <div id="video_testimonials" data-vide-bg="video/ocean" data-vide-options="position: 0% 50%"></div>
   <div class="video_gradient"></div>
-  <!-- End Video Background -->
 
   <div class="container">
     <div class="row">
@@ -125,7 +123,6 @@
       <div class="col-md-12">
         <div id="owl-testimonials" class="owl-carousel owl-theme">
 
-          <!-- Start Container Item -->
           <div class="item">
             <div class="col-lg-12">
               <blockquote class="quote">
@@ -141,9 +138,6 @@
               </blockquote>
             </div>
           </div>
-          <!-- End Container Item -->
-
-          <!-- Start Container Item -->
           <div class="item">
             <div class="col-lg-12">
               <blockquote class="quote">
@@ -159,9 +153,6 @@
               </blockquote>
             </div>
           </div>
-          <!-- End Container Item -->
-
-          <!-- Start Container Item -->
           <div class="item">
             <div class="col-lg-12">
               <blockquote class="quote">
@@ -177,13 +168,12 @@
               </blockquote>
             </div>
           </div>
-          <!-- End Container Item -->
 
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End Testimonials -->
 
 <div class="loading">
