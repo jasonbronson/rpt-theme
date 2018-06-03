@@ -3,6 +3,7 @@ var rpt = rpt || {};
 rpt.main = {
 
     resort: 0,
+    rates: [],
     getReservation: function(){
 
         var start = $("#arrival").val();
@@ -19,15 +20,6 @@ rpt.main = {
             kids = 0;
         }
 
-        var reservationdata = {};
-        reservationdata.start = start;
-        reservationdata.stop = stop;
-        reservationdata.adults = adults;
-        reservationdata.kids = kids;
-        reservationdata.condoname = $('#condovalue').val();
-        reservationdata.condo = condo;
-        reservationdata.resort = $('#resortvalue').val();
-        this.setCookieData('reservationdata', reservationdata);
 
         //set some text for travel dates
         $('.arrival-date').html(start);
@@ -50,9 +42,20 @@ rpt.main = {
                     if(object.Error != null){
                         alert(object.Error);
                     }
-
+                    rpt.main.rates = object;
                     rpt.main.setPricing(object);
-
+                    
+                    var reservationdata = {};
+                    reservationdata.start = start;
+                    reservationdata.stop = stop;
+                    reservationdata.adults = adults;
+                    reservationdata.kids = kids;
+                    reservationdata.condoname = $('#condovalue').val();
+                    reservationdata.condo = condo;
+                    reservationdata.resort = $('#resortvalue').val();
+                    reservationdata.total = rpt.main.rates.Total;
+                    console.log("RATES: " + reservationdata);
+                    rpt.main.setCookieData('reservationdata', reservationdata);
 
                 } else {
                     console.log("reservation call failed");
@@ -60,6 +63,10 @@ rpt.main = {
             }
 
         });
+
+
+        
+
 
 
     },
@@ -202,17 +209,36 @@ rpt.main = {
     },
     loadreservationdata: function(){
         var data = JSON.parse(rpt.main.getCookieData('reservationdata'));
-        //console.log(data);
+        console.log(data);
+        //reservation details
         $('.propertyname').html(data.resort);
         $('.condoroomtype').html(data.condoname);
         $('.datesofstay').html(data.start + " - " + data.stop);
         $('.guest12andover').html(data.adults);
         $('.guestunder12').html(data.kids);
+        $('.total').html("$" + data.total);
+        
+        //customer information
+        $('.name').html(data.fname + ' ' + data.lname );
+        $('.email').html(data.email);
+        $('.daytimephone').html(data.dayphone);
+        $('.eveningphone').html(data.eveningphone);
+        $('.fax').html(data.fax);
+
+        //billing address
+        $('.address').html(data.address1);
+        $('.address2').html(data.address2);
+        $('.city').html(data.city);
+        $('.state').html(data.state);
+        $('.zip').html(data.zip);
+        $('.country').html(data.country);
+        
         //$('#instructions').html();
 
     },
     step: function (formName){
 
+        
         //var temp = $('#' + formName).serializeArray();
         var paramObj = {};
         $.each($('#' + formName).serializeArray(), function(_, kv) {
@@ -318,6 +344,18 @@ rpt.main = {
             //$('.tab-pricing').show();
         });
 
+        $('#reservationinformation-form').submit(function(){
+            event.preventDefault();
+            rpt.main.step('reservationinformation-form');
+        });
+        $('#reservationbilling-form').submit(function(){
+            event.preventDefault();
+            rpt.main.step('reservationbilling-form');
+        });
+        $('#reservationcc-form').submit(function(){
+            event.preventDefault();
+            rpt.main.step('reservationcc-form');
+        });
 
         $('#btn-creditcard').click(function (e) {
             e.preventDefault();
@@ -328,6 +366,7 @@ rpt.main = {
             $('.guest12andover').html($('#adultvalue').val());
             $('.guestunder12').html($('#childrenvalue').val());
             $('.propertyname').html($('#resortvalue').val());
+            
 
         });
 
@@ -342,8 +381,9 @@ rpt.main = {
         });
 
 
-        $('#bookmyreservation').click(function (e) {
+        $('#reservationfinal-form').submit(function (e) {
             e.preventDefault();
+
             var myform = $('.reservation-form');
              // Find disabled inputs, and remove the "disabled" attribute
             var disabled = myform.find(':input:disabled').removeAttr('disabled');

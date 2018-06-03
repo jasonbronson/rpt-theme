@@ -41,6 +41,8 @@
                               <li data-value="6">6 adults</li>
                               <li data-value="7">7 adults</li>
                               <li data-value="8">8 adults</li>
+                              <li data-value="9">9 adults</li>
+                              <li data-value="10">10 adults</li>
                           </ul>
                         <select data-placeholder="Adults">
                           <option value="">Adults</option>
@@ -48,6 +50,12 @@
                           <option value="2">2 adults</option>
                           <option value="3">3 adults</option>
                           <option value="4">4 adults</option>
+                          <option value="5">5 adults</option>
+                          <option value="6">6 adults</option>
+                          <option value="7">7 adults</option>
+                          <option value="8">8 adults</option>
+                          <option value="9">9 adults</option>
+                          <option value="10">10 adults</option>
                         </select>
                       </span>
             <span class="children select-box medium" id="childrenlist">

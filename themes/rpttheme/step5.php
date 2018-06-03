@@ -1,79 +1,66 @@
  <!--  Start final screen -->
                         <li class="tab-content active">
-                            <form method="post" class="reservation-form" id="reservation-form">
+                            <form method="post" class="reservation-form" id="reservationfinal-form">
                             <article class="information segment no-target segment-title">
                                 <div class="row text-left">
+
+                                <div class="alert alert-danger carddeclined">
+                                    <strong> Credit Card Declined Go Back and Check Card. </strong>
+                                </div>
+                                
+                                <?php $legendprinted=false; $fields = array('Name' => 'name', 'Email' => 'email', 'Daytime Phone' => 'daytimephone', 'Evening Phone' => 'eveningphone','Fax' => 'fax', ); $legend = "Your Information"; foreach($fields as $key => $value): ?>
                                     <div class="col-md-6 col-md-offset-2">
-                                        <legend>Your Reservation</legend>
-                                        <div class='form-row'>
-                                            <div class="alert alert-danger carddeclined">
-                                                <strong></strong> Credit Card Declined Go back and check card
-                                            </div>
-
-                                            <div class='form-group2 required'>
-
+                                        <?php if(!$legendprinted): ?>
+                                          <legend><?php echo $legend; $legendprinted=true; ?></legend>
+                                        <?php endif; ?>
+                                        <div class="form-row">
+                                            <div class="form-group2 required">
                                                 <div class="col-md-6">
-                                                    <label class='control-label'>Property:</label>
+                                                    <label class="control-label"><?php echo $key; ?>:</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <span class="propertyname"></span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-offset-2">
-                                        <div class='form-row'>
-                                            <div class='form-group2 required'>
-
-                                                <div class="col-md-6">
-                                                    <label class='control-label'>Condo/Room Type:</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <span class="condoroomtype"></span>
+                                                    <span class="<?php echo $value; ?>"></span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-offset-2">
-                                        <div class='form-row'>
-                                            <div class='form-group2 required'>
+                                    </div>   
+                                <?php endforeach; ?> 
 
+                                <?php $legendprinted=false; $fields = array('Address' => 'address', 'Address2' => 'address2', 'City' => 'city', 'State' => 'state','Zip' => 'zip', 'Country'=>'country' ); $legend = "Billing Address"; foreach($fields as $key => $value): ?>
+                                    <div class="col-md-6 col-md-offset-2">
+                                        <?php if(!$legendprinted): ?>
+                                          <legend><?php echo $legend; $legendprinted=true; ?></legend>
+                                        <?php endif; ?>
+                                        <div class="form-row">
+                                            <div class="form-group2 required">
                                                 <div class="col-md-6">
-                                                    <label class='control-label'>Dates of Stay:</label>
+                                                    <label class="control-label"><?php echo $key; ?>:</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <span class="datesofstay"></span>
+                                                    <span class="<?php echo $value; ?>"></span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-offset-2">
-                                        <div class='form-row'>
-                                            <div class='form-group2 required'>
+                                    </div>   
+                                <?php endforeach; ?>     
 
+                                <?php $legendprinted=false; $fields = array('Property' => 'propertyname', 'Condo/Room Type' => 'condoroomtype', 'Dates of Stay' => 'datesofstay', 'Guests 12+ / Adults' => 'guest12andover','Guests under 12 / Children' => 'guestunder12', 'Total'=>'total' ); $legend = "Reservation Details"; foreach($fields as $key => $value): ?>
+                                    <div class="col-md-6 col-md-offset-2">
+                                        <?php if(!$legendprinted): ?>
+                                          <legend><?php echo $legend; $legendprinted=true; ?></legend>
+                                        <?php endif; ?>
+                                        <div class="form-row">
+                                            <div class="form-group2 required">
                                                 <div class="col-md-6">
-                                                    <label class='control-label'>Guests 12 and over:</label>
+                                                    <label class="control-label"><?php echo $key; ?>:</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <span class="guest12andover"></span>
+                                                    <span class="<?php echo $value; ?>"></span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-md-offset-2">
-                                        <div class='form-row'>
-                                            <div class='form-group2 required'>
-
-                                                <div class="col-md-6">
-                                                    <label class='control-label'>Guest under 12:</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <span class="guestunder12"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>   
+                                <?php endforeach; ?>     
 
                                     <div class="col-md-6 col-md-offset-2">
                                         <legend>Additional Information</legend>
@@ -88,7 +75,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                
 
                                 <div class="col-md-6 col-md-offset-2">
 
@@ -96,7 +83,7 @@
                                         <div class='form-group2 required'>
 
                                             <div class="col-md-6 ">
-                                                    <label class='control-label'>Terms and Conditions:  <input type="checkbox" name="policy_check" value="on" checked=""></label>
+                                                    <label class='control-label'>Terms and Conditions:  <input type="checkbox" id="policy_check" name="policy_check" value="on" required></label>
                                                 </div>
                                             <div class="col-md-6">
                                                
@@ -107,16 +94,22 @@
                                         </div>
                                     </div>
                                 </div>
+
+                            </div>
                                 <hr>
 
-
-
                                 <div class="row">
+
+                                     <div class="alert alert-danger carddeclined">
+                                        <strong> Credit Card Declined Go Back and Check Card. </strong>
+                                    </div>
+                                    
                                     <div class="col-md-6">
                                         <a href="?step=4" class="bookmystaybtn">Go Back</a>
                                     </div>
                                     <div class="col-md-6 ">
-                                        <a class="bookmystaybtn" id="bookmyreservation" href="#">Book Reservation</a>
+                                    <input type="submit" value="Book Reservation" class="bookmystaybtn">
+                                    
                                     </div>
                                 </div>
                             </article>

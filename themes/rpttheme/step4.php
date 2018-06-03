@@ -8,7 +8,7 @@
                                 <div class="col-md-6 col-md-offset-2">
                                     <legend>Credit Card Information</legend>
                                     <div class='form-row'>
-                                        <div class='form-group required'>
+                                        <div class='form-group '>
                                             <div class="col-md-6">
                                                 <label class='control-label'>Name on Card:</label>
                                             </div>
@@ -39,20 +39,20 @@
                                                 <label class='control-label'>Credit Card Number:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <input class='form-control' type='text' name="cc_number" maxlength="16" value="">
+                                                <input class='form-control' type='text' name="cc_number" maxlength="16" value="" required>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-md-offset-2">
                                     <div class='form-row'>
-                                        <div class='form-group required'>
+                                        <div class='form-group'>
 
                                             <div class="col-md-6">
                                                 <label class='control-label'>Expiration Date:</label>
                                             </div>
                                             <div class="col-md-3">
-                                                <select name="cc_exp_month">
+                                                <select name="cc_exp_month" required>
                                                   <?php $ccmonths = array("01","02","03","04","05","06","07","08","09","10","11","12");
                                                   foreach($ccmonths as $value){
                                                     if($cc_exp_month == $value){
@@ -65,7 +65,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-3">
-                                                <select name="cc_exp_year">
+                                                <select name="cc_exp_year" required>
                                                 <?php 
                                                 for($a = date("Y"); $a < (date("Y") + 10); $a++ ){
                                                     $years[] = $a;
@@ -94,7 +94,7 @@
                                                 You can find the 3-digit CVC code on the back of your credit card.
                                             </div>
                                             <div class="col-md-3">
-                                                <input class='form-control cc-ccv' type='text' name="cc_ccv" maxlength="3" value="">
+                                                <input class='form-control cc-ccv' type='text' name="cc_ccv" maxlength="3" value="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@
                                     <a href="?step=3" class="bookmystaybtn">Go Back</a>
                                 </div>
                                 <div class="col-md-6 ">
-                                    <a class="bookmystaybtn" href="javascript:rpt.main.step('reservationcc-form');">Continue</a>
+                                  <input type="submit" value="Continue" class="bookmystaybtn">
                                 </div>
                             </div>
                         </article>

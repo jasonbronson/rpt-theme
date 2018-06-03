@@ -20,24 +20,24 @@
                               </div>
                               <div class="col-md-6 col-md-offset-2">
                                   <div class='form-row'>
-                                      <div class='form-group required'>
+                                      <div class='form-group '>
                                           <div class="col-md-6">
                                               <label class='control-label'>Last Name:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='text' name="lname" value="">
+                                              <input class='form-control' type='text' name="lname" value="" required>
                                           </div>
                                       </div>
                                   </div>
                               </div>
                               <div class="col-md-6 col-md-offset-2">
                                   <div class='form-row'>
-                                      <div class='form-group required'>
+                                      <div class='form-group '>
                                           <div class="col-md-6">
                                               <label class='control-label'>Email Address:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='email' name="email" value="">
+                                              <input class='form-control' type='email' name="email" value="" required>
                                           </div>
                                       </div>
                                   </div>
@@ -63,7 +63,7 @@
                                               <label class='control-label'>Daytime Phone:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='text' name="dayphone" value="">
+                                              <input class='form-control' type='text' name="dayphone" value="" required>
                                           </div>
                                       </div>
                                   </div>
@@ -76,7 +76,7 @@
                                               <label class='control-label'>Evening Phone:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='text' name="eveningphone" value="">
+                                              <input class='form-control' type='text' name="eveningphone" value="" required>
                                           </div>
                                       </div>
                                   </div>
@@ -143,7 +143,7 @@
                                   <a href="?step=1" class="bookmystaybtn">Go Back</a>
                               </div>
                               <div class="col-md-6 ">
-                                  <a class="bookmystaybtn" href="javascript:rpt.main.step('reservationinformation-form')">Continue</a>
+                                  <input type="submit" value="Continue" class="bookmystaybtn">
                               </div>
                           </div>
 
