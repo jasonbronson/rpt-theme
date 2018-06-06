@@ -22,6 +22,18 @@
                                   <div class='form-row'>
                                       <div class='form-group '>
                                           <div class="col-md-6">
+                                              <label class='control-label'>Middle Initial:</label>
+                                          </div>
+                                          <div class="col-md-6">
+                                              <input class='form-control' type='text' name="middle" value="" required>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-md-offset-2">
+                                  <div class='form-row'>
+                                      <div class='form-group '>
+                                          <div class="col-md-6">
                                               <label class='control-label'>Last Name:</label>
                                           </div>
                                           <div class="col-md-6">
@@ -37,12 +49,12 @@
                                               <label class='control-label'>Email Address:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='email' name="email" value="" required>
+                                              <input class='form-control' type='email' name="email" value="" id="email" required>
                                           </div>
                                       </div>
                                   </div>
                               </div>
-                              <!--div class="col-md-6 col-md-offset-2">
+                              <div class="col-md-6 col-md-offset-2">
                                   <div class='form-row'>
                                       <div class='form-group required'>
 
@@ -50,11 +62,11 @@
                                               <label class='control-label'>Email Verify:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='text' name="emailverify">
+                                              <input class='form-control' type='email' name="emailverify" id="emailverify" required>
                                           </div>
                                       </div>
                                   </div>
-                              </div-->
+                              </div>
                               <div class="col-md-6 col-md-offset-2">
                                   <div class='form-row'>
                                       <div class='form-group required'>
@@ -76,7 +88,7 @@
                                               <label class='control-label'>Evening Phone:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='text' name="eveningphone" value="" required>
+                                              <input class='form-control' type='text' name="eveningphone" value="">
                                           </div>
                                       </div>
                                   </div>

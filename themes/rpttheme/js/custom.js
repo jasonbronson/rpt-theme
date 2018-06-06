@@ -219,7 +219,7 @@ rpt.main = {
         $('.total').html("$" + data.total);
         
         //customer information
-        $('.name').html(data.fname + ' ' + data.lname );
+        $('.name').html(data.fname + ' ' + data.middle + ' ' + data.lname );
         $('.email').html(data.email);
         $('.daytimephone').html(data.dayphone);
         $('.eveningphone').html(data.eveningphone);
@@ -346,7 +346,13 @@ rpt.main = {
 
         $('#reservationinformation-form').submit(function(){
             event.preventDefault();
-            rpt.main.step('reservationinformation-form');
+            var email = $('#email').val();
+            var emailverify = $('#emailverify').val();
+            if(email == emailverify){
+                rpt.main.step('reservationinformation-form');
+            }else{
+                alert('Email and email verify fields must match');
+            }
         });
         $('#reservationbilling-form').submit(function(){
             event.preventDefault();
