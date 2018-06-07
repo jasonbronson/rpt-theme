@@ -25,7 +25,7 @@
                                               <label class='control-label'>Middle Initial:</label>
                                           </div>
                                           <div class="col-md-6">
-                                              <input class='form-control' type='text' name="middle" value="" required>
+                                              <input class='form-control' type='text' name="middle" value="">
                                           </div>
                                       </div>
                                   </div>

@@ -262,7 +262,12 @@ rpt.main = {
         console.log(data);
         //check if credit card name and fill in that form field
         if(formName == "reservationcc-form"){
-            var name = data.fname + " " + data.lname;
+            if(data.middle.length == 0){
+                var name = data.fname + ' ' + data.lname;
+            }else{
+                var name = data.fname + ' ' + data.middle + ' ' + data.lname;
+            }
+           
             $('#card_name').val(name);
         }
 
