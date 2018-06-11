@@ -193,7 +193,7 @@ rpt.main = {
                     }
                     //console.log(exists[item]);
                 }
-                console.log(data);
+                //console.log(data);
                 //data = exists;
                 //data = Object.assign(exists, data);
             }
@@ -201,7 +201,7 @@ rpt.main = {
             console.log('Error: ' + e);
         }*/
         
-        Cookies.set(cookieName, data, { expires: 1 });
+        Cookies.set(cookieName, data, { expires: 7 });
         //console.log(data);
     },
     getCookieData: function(cookieName){
@@ -349,7 +349,7 @@ rpt.main = {
             //$('.tab-pricing').show();
         });
 
-        $('#reservationinformation-form').submit(function(){
+        $('#reservationinformation-form').submit(function(event){
             event.preventDefault();
             var email = $('#email').val();
             var emailverify = $('#emailverify').val();
@@ -359,11 +359,11 @@ rpt.main = {
                 alert('Email and email verify fields must match');
             }
         });
-        $('#reservationbilling-form').submit(function(){
+        $('#reservationbilling-form').submit(function(event){
             event.preventDefault();
             rpt.main.step('reservationbilling-form');
         });
-        $('#reservationcc-form').submit(function(){
+        $('#reservationcc-form').submit(function(event){
             event.preventDefault();
             rpt.main.step('reservationcc-form');
         });
