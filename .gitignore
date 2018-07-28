@@ -3,3 +3,4 @@ plugins/*
 themes/twenty*
 themes/upgrade/*
 uploads/*
+debug.log
