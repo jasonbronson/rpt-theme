@@ -171,6 +171,9 @@ rpt.main = {
         });
 
     },
+    clearCookieData: function(cookieName){
+        Cookies.remove(cookieName, { path: '' }); // removed!
+    },
     setCookieData: function(cookieName, data){
         
         //try{
@@ -201,7 +204,7 @@ rpt.main = {
             console.log('Error: ' + e);
         }*/
         
-        Cookies.set(cookieName, data, { expires: 7 });
+        Cookies.set(cookieName, data, { path: '', expires: 7 });
         //console.log(data);
     },
     getCookieData: function(cookieName){
@@ -256,7 +259,8 @@ rpt.main = {
     },
     loadForm: function(formName){
         
-        var data = JSON.parse(this.getCookieData('reservationdata'));
+        var data = JSON.parse(rpt.main.getCookieData('reservationdata'));
+        
         var formElement = document.getElementById(formName);
         populate(formElement, data);
         console.log(data);
@@ -420,6 +424,8 @@ rpt.main = {
 
                         if(object.charge_success){
                             $(".carddeclined").hide();
+                            //remove old data
+                            rpt.main.clearCookieData('reservationdata');
                             window.location.href = '/thankyou/';
                         }else{
                             $(".carddeclined").show();
