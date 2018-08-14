@@ -1,0 +1,683 @@
+[
+    {
+        "key": "group_5a884f6a0184d",
+        "title": "HomePageGroup",
+        "fields": [
+            {
+                "key": "field_5a86359013bf8",
+                "label": "HomePageText",
+                "name": "homepagetext",
+                "type": "wysiwyg",
+                "instructions": "This controls the text on the homepage",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "toolbar": "full",
+                "media_upload": 1,
+                "tabs": "all",
+                "delay": 0
+            },
+            {
+                "key": "field_5a8635d013bf9",
+                "label": "HomePageImage",
+                "name": "homepageimage",
+                "type": "image",
+                "instructions": "Replaces the image on the homepage",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "preview_size": "thumbnail",
+                "library": "all",
+                "return_format": "array",
+                "min_width": 0,
+                "min_height": 0,
+                "min_size": 0,
+                "max_width": 0,
+                "max_height": 0,
+                "max_size": 0,
+                "mime_types": ""
+            },
+            {
+                "key": "field_5a8652769c587",
+                "label": "HomePage TravelDates Background Image",
+                "name": "homepage_traveldates_background_image",
+                "type": "image",
+                "instructions": "controls the background image for the homepage when travel dates and details are shown.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "preview_size": "thumbnail",
+                "library": "all",
+                "return_format": "array",
+                "min_width": 0,
+                "min_height": 0,
+                "min_size": 0,
+                "max_width": 0,
+                "max_height": 0,
+                "max_size": 0,
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "23"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "author",
+            "format",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b732297530cc",
+        "title": "Options Page",
+        "fields": [
+            {
+                "key": "field_5b7322ee1729e",
+                "label": "Phone Number Top of Screen",
+                "name": "header_phone_text",
+                "type": "text",
+                "instructions": "Example   Reserve by phone (480) 993-0333 or (520) 232-2143",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Reserve by phone (480) 993-0333 or (520) 232-2143",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5b7323de64f4e",
+                "label": "Social Facebook Link",
+                "name": "social_facebook",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5b7323ea64f4f",
+                "label": "Social Twitter Link",
+                "name": "social_twitter",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5b7323fc64f50",
+                "label": "Social Linkedin Link",
+                "name": "social_linkedin",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5b73266e1cae5",
+                "label": "Copyright Notice",
+                "name": "copyright_notice",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Copyright 2018 © RockyPointTravel.com. All rights reserved.",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "site-options"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a88d9c7c3ebe",
+        "title": "PlainPage",
+        "fields": [
+            {
+                "key": "field_5a88d9cd95a25",
+                "label": "headerimage",
+                "name": "headerimage",
+                "type": "image",
+                "instructions": "Header Image displayed at top of page",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5a88dc3218355",
+                "label": "content",
+                "name": "content",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "page-plain.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "author",
+            "format",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a884f6a0c82f",
+        "title": "ResortPages",
+        "fields": [
+            {
+                "key": "field_5b72d2c823050",
+                "label": "ResortName",
+                "name": "resortname",
+                "type": "text",
+                "instructions": "Name of Resort to show up in the menu",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a877cb18ad76",
+                "label": "Header Image",
+                "name": "headerimage",
+                "type": "image",
+                "instructions": "Image at the top of the resort page",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "preview_size": "thumbnail",
+                "library": "all",
+                "return_format": "array",
+                "min_width": 0,
+                "min_height": 0,
+                "min_size": 0,
+                "max_width": 0,
+                "max_height": 0,
+                "max_size": 0,
+                "mime_types": ""
+            },
+            {
+                "key": "field_5a877d088ad77",
+                "label": "h1",
+                "name": "h1",
+                "type": "text",
+                "instructions": "Title of the resort example \"BELLA SIRENA 1 BEDROOM LUXURY CONDO\"",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a877d848ad78",
+                "label": "about resort",
+                "name": "about_resort",
+                "type": "wysiwyg",
+                "instructions": "details about this particular resort",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "toolbar": "full",
+                "media_upload": 1,
+                "tabs": "all",
+                "delay": 0
+            },
+            {
+                "key": "field_5a879bcf5169c",
+                "label": "startpricepernight",
+                "name": "startpricepernight",
+                "type": "text",
+                "instructions": "Price that starts for this condo per night",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "$99",
+                "placeholder": "$99",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a879d8584983",
+                "label": "Amenities",
+                "name": "amenities",
+                "type": "wysiwyg",
+                "instructions": "Amenities for this resort",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "toolbar": "full",
+                "media_upload": 1,
+                "tabs": "all",
+                "delay": 0
+            },
+            {
+                "key": "field_5b72d4dc14a2d",
+                "label": "Resort Images",
+                "name": "resort_images",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5b72d4f114a2e",
+                        "label": "resortimages",
+                        "name": "resortimages",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5a87a776669a3",
+                "label": "resortreviews",
+                "name": "resortreviews",
+                "type": "wysiwyg",
+                "instructions": "Reviews of folks for this resort",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "toolbar": "full",
+                "media_upload": 1,
+                "tabs": "all",
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "resorts"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b731c212a376",
+        "title": "Resorts (Left Rail\/Sidebar)",
+        "fields": [
+            {
+                "key": "field_5b731c66f82c0",
+                "label": "Left Rail \/ Sidebar",
+                "name": "left_resort_rail_components",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5b731c846081d": {
+                        "key": "5b731c846081d",
+                        "name": "make_reservation",
+                        "label": "Make Reservation Button",
+                        "display": "block",
+                        "sub_fields": [],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5b731ca2f8ede": {
+                        "key": "5b731ca2f8ede",
+                        "name": "live_chat",
+                        "label": "Live Chat",
+                        "display": "block",
+                        "sub_fields": [],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5b731d2a1e598": {
+                        "key": "5b731d2a1e598",
+                        "name": "wysiwyg",
+                        "label": "WYSIWYG",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b731d351e599",
+                                "label": "Custom WYSIWYG",
+                                "name": "resorts_custom_wysiwyg",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Item",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "rail-components"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5ab30a8893c6e",
+        "title": "Terms",
+        "fields": [
+            {
+                "key": "field_5ab30a8ded296",
+                "label": "termsandconditions",
+                "name": "termsandconditions",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "508"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]
