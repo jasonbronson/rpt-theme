@@ -10,13 +10,12 @@ class MainNav
     }
     public function registerNavMenu()
     {
-        register_nav_menus(
-            array(
-                'primary' => __('Header Nav Menu'),
-                'footer_left' => __('Footer Left Nav Menu'),
-                'footer_right' => __('Footer Right Nav Menu'),
-            )
-        );
+        
+        register_nav_menus(array(
+            'left-of-logo' => __('Left Of Logo', 'rpttheme'),
+            'right-of-logo' => __('Right Of Logo', 'rpttheme')
+        ));
     }
+
 }
 $nav = new MainNav();
