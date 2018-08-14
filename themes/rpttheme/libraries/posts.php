@@ -55,7 +55,7 @@ class Posts {
 	 *
 	 * @return array<object>
 	 */
-	public function getAll( $postsPerPage = null, $paged = null, $offset = null){
+	public function getAll( $postsPerPage = null, $paged = null, $offset = null, $order = "DESC"){
 		$paged = isset($paged)?$paged:10;
 		$perPage = isset($postsPerPage)?$postsPerPage:get_option( 'posts_per_page' );
 
@@ -64,7 +64,7 @@ class Posts {
 				'posts_per_page' => $perPage,
 				'offset' => $offset,
 				'orderby' => 'post_date',
-				'order' => 'DESC'
+				'order' => $order
 			)
 		);
 		$query = new \WP_Query( $args );
