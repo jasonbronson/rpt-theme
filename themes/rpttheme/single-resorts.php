@@ -1,6 +1,3 @@
-<?php
-/* Template Name: Resorts */
-?>
 <?php get_header(); ?>
 
 <!-- Start Main-Wrapper -->
@@ -33,31 +30,16 @@
                 <div class="col-md-12">
                     <div class="room-wrapper negative-margin">
                         <div class="sidebar col-md-3">
-                            <div class="sidebar-widget reservation">
-                                <h5 class="widget-title">Book a reservation today</h5>
-                                <aside class="widget-content">
-                                    <form action="/" class="default-form">
-                                        <button class="btn btn-transparent-gray">Make reservation</button>
-                                    </form>
-                                </aside>
-                            </div>
-                            <div class="sidebar-widget offers">
-                            <?php if(get_field( "livechat" )): ?>
-                            <div style="text-align:center"><a href="javascript:void(window.open('http://livezilla.manticore.com/chat.php','','width=590,height=610,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes'))">
-                                <img src="http://livezilla.manticore.com/image.php?id=04&amp;type=inlay" width="191" height="69" border="0" alt="LiveZilla Live Help"></a>
-                                <p style="margin-top: 7; margin-bottom: 7"><font color="#FFFFFF" face="Arial" style="font-size: 9pt; ">::-&nbsp; Do you have questions? ::-</font></p>
-                                <p style="margin-top: 7; margin-bottom: 7"><font color="#FFFFFF" face="Arial" style="font-size: 9pt; ">::- <span lang="es">¿</span>Tiene alguna pregunta? ::-</font></p>
-                            </div>
-                            <?php endif; ?>
+
+                            <?php get_template_part('layouts/resorts-left-rail');?>
                             
-                            </div>
                         </div>
                         <div class="room-content col-md-9">
                             <div class="room-general">
                                 <img src="" alt="" class="img-responsive">
                                 <header>
                                     <div class="pull-left">
-                                        <h4 class="title-section"><?php echo get_field( "title" ); ?></h4>
+                                        <h4 class="title-section"><?php echo get_field( 'h1' ); ?></h4>
                                     </div>
                                     <div class="pull-right">
                                         <span class="price">
@@ -112,11 +94,29 @@
                                             </script>
                                         <div class="images-gallery">
                                             <ul id="lightSlider">
-                                                <?php foreach ( UriImageScanner::getPictures() as $index => $folder ): ?>
-                                                    <li data-thumb="<?php echo $folder['relativepath']; ?>/<?php echo $folder['filename']; ?>" data-src="<?php echo $folder['relativepath']; ?>/<?php echo $folder['filename']; ?>">
-                                                        <img src="<?php echo $folder['relativepath']; ?>/<?php echo $folder['filename']; ?>" class="img-responsive" />
-                                                    </li>
-                                                <?php endforeach; ?>
+                                                  <?php
+
+                                                    // check if the repeater field has rows of data
+                                                    if (have_rows('resort_images')):
+
+                                                        // loop through the rows of data
+                                                        while (have_rows('resort_images')): the_row();
+
+                                                            $image = get_sub_field('resortimages');
+                                                            echo "<li data-thumb='{$image}' data-src='{$image}'>
+                                                             <img src='{$image}' class='img-responsive' />
+                                                            </li>";
+
+                                                        endwhile;
+
+                                                    else:
+
+                                                        // no rows found
+
+                                                    endif;
+
+                                                    ?>
+                                                  
                                             </ul>
                                         </div>
                                     </div>

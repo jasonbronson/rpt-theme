@@ -3,7 +3,6 @@
 ?>
 <?php get_header(); ?>
 
-
 <!-- Start Banner -->
 <section id="banner">
   <div class="banner-bg">

@@ -1,4 +1,26 @@
 <?php
+
+define('THEME_PATH', get_template_directory());
+//autoload libraries folder
+require_once THEME_PATH . '/libraries/autoload.php';
+require_once THEME_PATH . '/layouts/menu.php';
+
+//load custom post types
+$cpt = new Libraries\CustomPostTypes(
+    array('resorts'), array(
+        'resorts' => 'title',
+    ),
+    "Resorts"
+);
+$cptArgs = array(
+    'show_in_menu' => 'menu_custom_forms',
+);
+$cpt->registerCustomPostType('resorts', 'Resort Page', 'Resort Pages', $cptArgs, 'resorts', array( 'title', 'custom-fields'));
+//resorts
+$temp = new Libraries\Resorts();
+//rails
+$rails = new Libraries\RailComponents();
+
 add_action('after_setup_theme', 'rpttheme_setup');
 function rpttheme_setup()
 {
@@ -25,7 +47,16 @@ function all_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
-	) );
+    ) );
+
+    register_sidebar(array(
+        'name' => 'weather page widget',
+        'id' => 'weather_page_widget',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '',
+        'after_title' => '',
+    ));
 
 }
 add_action( 'widgets_init', 'all_widgets_init' );
@@ -92,3 +123,4 @@ function rpttheme_comments_number($count)
         return $count;
     }
 }
+

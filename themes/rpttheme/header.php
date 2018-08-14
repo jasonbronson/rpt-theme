@@ -40,16 +40,16 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-12">
                         <ul class="contact-info custom-list list-inline">
-                            <li><i class="fa fa-phone"></i><span>Reserve by phone (480) 993-0333 or (520) 232-2143</span></li>
+                            <li><i class="fa fa-phone"></i><span><?php echo get_field('header_phone_text', 'options'); ?></span></li>
                             <!--li><i class="fa fa-phone"></i><span></span></li-->
                         </ul>
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 text-right pull-right">
                         <div-- class="contact-right">
                             <ul class="social custom-list list-inline">
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li><a href="<?php echo get_field('social_facebook', 'options'); ?>"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="<?php echo get_field('social_twitter', 'options'); ?>"><i class="fa fa-twitter-square"></i></a></li>
+                                <li><a href="<?php echo get_field('social_linkedin', 'options'); ?>"><i class="fa fa-linkedin-square"></i></a></li>
                             </ul>
                             <!--div class="header-login">
                                 <button class="login-toggle header-btn"><i class="fa fa-power-off"></i> Login</button>
