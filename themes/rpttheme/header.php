@@ -98,8 +98,31 @@
                             <div class="col-lg-5 col-md-5 col-sm-12">
                                 
                                 <?php 
-                                    $defaults1 = array( 'container' => 'ul', 'nav_menu_item_id'=>false, 'nav_menu_css_class' => false, 'menu_class' => 'nav navbar-nav main-nav', 'theme_location' => 'left-of-logo' );
-                                    wp_nav_menu( $defaults1 ); ?>
+                                $menu_name = 'left-of-logo';
+                                $locations = get_nav_menu_locations();
+                                $menu = wp_get_nav_menu_object($locations[$menu_name]);
+                                 $menuitems = wp_get_nav_menu_items($menu->term_id, array('order' => 'ASC'));
+//echo "<pre>"; var_dump($menuitems); exit;
+                                ?>
+                                <ul id="menu-leftoflogo" class="nav navbar-nav main-nav">
+                                <?php
+                                    foreach($menuitems as $menu){
+                                        echo "<li id='menu-item-' class='has-submenu menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item current_page_item menu-item-'><a href='$menu->url'>$menu->title</a></li>";
+                                    }
+                                ?>
+                                <ul class="sub-menu" style="display:none;">
+                                <?php
+                                    foreach ($menuitems as $menu) {
+                                        echo "<li id='menu-item-'>$menu->title</li>";
+                                    }
+                                ?>
+                                </ul>
+                                </ul>
+                                    
+                                <?php        // $defaults1 = array( 'container' => 'ul', 'nav_menu_item_id'=>false, 'nav_menu_css_class' => false, 'menu_class' => 'nav navbar-nav main-nav', 'theme_location' => 'left-of-logo' );
+                                        // wp_nav_menu( $defaults1 ); 
+                                ?>
+                                </ul>
                             </div>
                             <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-12 col-sm-offset-0">
                                     <?php 
